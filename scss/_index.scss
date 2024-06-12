@@ -1,0 +1,135 @@
+@import '../scss/variables';
+@import '../scss/placeholders';
+@import '../scss/mixins';
+
+body {
+    @extend %web-site;
+    background-color: rgb(236, 236, 236);
+}
+
+main, header {
+    margin: 0px 138px;
+}
+
+header {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header {
+    h1 {
+        @include header-typography;
+    }
+}
+
+main {
+h1{
+    @extend %main-h1;
+}
+}
+
+.section-1 {
+@include display-flex;
+
+
+    div{
+        @extend %div; 
+    }
+
+        
+
+    .img {
+        width: 100%
+    }
+
+}
+
+.h2 {
+    @extend %h2;
+}
+
+div {
+    p {
+        @extend %p;
+    }
+
+        .p1 {
+            margin-top: 45px;
+        }
+    
+        .p2 {
+            margin-top: 8px;
+        }
+    
+        .img {
+            width: 320px;
+        }
+    
+        .clock {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 30%;
+            margin-left: 35px;
+            margin-top: 20px;
+        }
+}
+
+.section-2 {
+    @include display-flex;
+}
+
+.section-img1 {
+    @include display-flex ($flex-direction: column);
+    justify-content: space-around;
+    height: 900px;
+
+    P {
+        @extend %h2;
+        top: 780px;
+        margin-left: 15px;
+    }
+}
+
+.section-img2 {
+    width: 365px;
+    height: 700px;
+    @include display-flex ($flex-direction: column);
+
+}
+
+footer {
+    height: 200px;
+    background-color: #243043;
+    margin-top: 30px;
+    margin-left: 0px;
+    display: flex;
+
+    h6 {
+        @extend %footer-h6;
+    }
+
+    p{
+        @extend %footer-p;
+    }
+}
+
+footer section {
+    margin-left: 30px;
+}
+
+.footer-1 {
+    display: flex;
+
+}
+
+footer img {
+    width: 14%;
+    margin-left: 390px;
+    margin-top: 50px;
+}
+
